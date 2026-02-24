@@ -1,0 +1,49 @@
+  .main-footer a:hover {
+        color: #c1a766;
+        text-decoration: none;
+    }
+
+    .main-footer .btn-primary {
+        background-color: #c1a766;
+        border: none;
+    }
+
+    .main-footer .btn-primary:hover {
+        background-color: #c1a766;
+    }
+
+    .main-footer__bg {
+        z-index: 0;
+    }
+
+    .main-footer>.container {
+        z-index: 1;
+        position: relative;
+    }
+
+    .designed-by {
+        font-size: 13px;
+        color: #ffffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .designer-logo {
+        width: 90px;
+        /* adjust size */
+        height: auto;
+        display: inline-block;
+    }
+
+    .dby{
+        margin-top: 2%;
+    }
+
+    @media (max-width: 480px) {
+
+    .dby {
+       margin-top: 0%;
+    }
+}

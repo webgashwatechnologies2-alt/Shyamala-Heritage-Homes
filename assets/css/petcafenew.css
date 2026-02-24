@@ -1,0 +1,556 @@
+/* 
+  Pet Cafe Redesign - "The Modern Sanctuary"
+  Theme: Organic, Unique, Arch-based, Professional
+  Refined: Tighter spacing, better text alignment
+  Fixes: Increased Image Height, Forced White Footer
+*/
+
+:root {
+  --pc-primary: #1a4d2e;
+  /* Deep Forest */
+  --pc-secondary: #cba135;
+  /* Antique Gold */
+  --pc-text-dark: #2d2d2d;
+  /* Charcoal */
+  --pc-text-light: #555555;
+  /* Gray */
+  --pc-bg-soft: #fcfbf9;
+  /* Warm Paper White */
+  --pc-bg-white: #ffffff;
+  --pc-radius-lg: 30px;
+  --pc-font: 'Plus Jakarta Sans', sans-serif;
+  --pc-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+}
+
+/* --- Base --- */
+body {
+  font-family: var(--pc-font);
+  color: var(--pc-text-dark);
+  background-color: var(--pc-bg-soft);
+  line-height: 1.7;
+  /* Slightly tighter line height */
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #c1a766;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+p {
+  color: var(--pc-text-light);
+  margin-bottom: 20px;
+  /* Reduced margin */
+}
+
+.pc-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 60px 0;
+  /* Reduced from 100px */
+}
+
+/* --- Hero Section (Constraint: 50px, 600 weight) --- */
+.pc-hero {
+  position: relative;
+  height: 80vh;
+  /* Slightly reduced height */
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../Shyamalaimages/PrivateWoodenCabinPetCafe/bdh.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.pc-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  /* Slight darker for better text pop */
+  z-index: 1;
+}
+
+.pc-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+/* USER CONSTRAINT APPLIED HERE */
+.pc-hero-title {
+  font-size: 50px !important;
+  font-weight: 600 !important;
+  color: #fff;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+
+.pc-hero-subtitle {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0.95;
+}
+
+.pc-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--pc-primary);
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.pc-btn:hover {
+  background: var(--pc-secondary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- Organic Layout --- */
+
+/* Intro */
+.pc-intro {
+  text-align: center;
+  max-width: 900px;
+  /* Wider to reduce vertical height of text */
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+  /* Reduced Padding */
+}
+
+.pc-intro h2 {
+  font-size: 32px;
+  /* Balanced size */
+  margin-bottom: 20px;
+}
+
+/* Organic Split Sections */
+.pc-organic-section {
+  display: flex;
+  align-items: center;
+  /* Vertical Center */
+  gap: 60px;
+  /* Reduced gap */
+  margin-bottom: 80px;
+  /* Reduced from 120px */
+}
+
+.pc-organic-image-col {
+  flex: 1;
+  position: relative;
+}
+
+.pc-organic-content-col {
+  flex: 1;
+}
+
+.pc-organic-section.alt {
+  flex-direction: row-reverse;
+}
+
+/* The Arch MASK */
+.pc-arch-img {
+  width: 100%;
+  height: 700px;
+  /* INCREASED HEIGHT AS REQUESTED */
+  object-fit: cover;
+  /* The Arch Shape: Top corners rounded heavily, bottom square */
+  border-radius: 250px 250px 20px 20px;
+  box-shadow: var(--pc-shadow);
+  transition: transform 0.5s ease;
+}
+
+.pc-organic-section.alt .pc-arch-img {
+  border-radius: 250px 250px 20px 20px;
+}
+
+.pc-organic-section:hover .pc-arch-img {
+  transform: translateY(-5px);
+}
+
+/* Typography */
+.pc-section-subtitle {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--pc-secondary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pc-section-title {
+  font-size: 36px;
+  /* Slightly smaller for density */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Feature Grid inside Section */
+.pc-icon-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  /* Tighter grid */
+  margin-top: 25px;
+}
+
+.pc-icon-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pc-icon-box {
+  width: 36px;
+  height: 36px;
+  background: #eef5f0;
+  /* Light green bg */
+  color: var(--pc-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.pc-icon-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-top: 6px;
+  /* align with icon */
+  color: var(--pc-text-dark);
+}
+
+/* --- Premium Info Cards --- */
+.pc-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.pc-info-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Special Style for Birthday Card */
+.pc-info-card.celebrate {
+  background: linear-gradient(135deg, #ffffff 0%, #fffbf2 100%);
+  border: 1px solid rgba(203, 161, 53, 0.15);
+  /* Gold tint border */
+}
+
+.pc-info-card.celebrate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(203, 161, 53, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Card Header */
+.pc-info-header {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pc-info-icon {
+  width: 54px;
+  height: 54px;
+  background: var(--pc-primary);
+  color: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 8px 20px rgba(26, 77, 46, 0.2);
+}
+
+.pc-info-card.celebrate .pc-info-icon {
+  background: var(--pc-secondary);
+  box-shadow: 0 8px 20px rgba(203, 161, 53, 0.3);
+}
+
+.pc-info-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--pc-text-dark);
+  letter-spacing: -0.5px;
+}
+
+/* Content List */
+.pc-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.pc-info-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--pc-text-light);
+  line-height: 1.6;
+}
+
+.pc-info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pc-info-list li::before {
+  content: '\f00c';
+  /* FontAwesome check */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color: var(--pc-secondary);
+  font-size: 14px;
+}
+
+/* Price List Variant */
+.pc-info-list.price-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+  padding-bottom: 12px;
+}
+
+.pc-info-list.price-list li:last-child {
+  border-bottom: none;
+}
+
+.pc-info-list.price-list li::before {
+  content: none;
+}
+
+.pc-price-tag {
+  font-weight: 700;
+  color: var(--pc-primary);
+  font-size: 16px;
+  background: #eef5f0;
+  /* padding: 4px 12px; */
+  border-radius: 30px;
+}
+
+/* Special Note Highlight */
+.pc-info-card p.rounded {
+  background: rgba(203, 161, 53, 0.08) !important;
+  border-left: 4px solid var(--pc-secondary) !important;
+  color: var(--pc-text-dark);
+  font-weight: 500;
+}
+
+/* --- Cards Grid (Reservations & Full Zone) --- */
+.pc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.pc-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: var(--pc-shadow);
+  transition: transform 0.3s;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.pc-card:hover {
+  transform: translateY(-5px);
+}
+
+.pc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee;
+}
+
+.pc-card-icon-lg {
+  font-size: 20px;
+  color: var(--pc-secondary);
+}
+
+.pc-card-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* List Styling inside cards */
+.pc-list-check li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.pc-list-check li i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: var(--pc-secondary);
+  /* Gold checks look better white on green bg */
+}
+
+.pc-card[style*="primary"] .pc-list-check li i {
+  color: var(--pc-secondary);
+}
+
+/* Map */
+.pc-map-frame {
+  border-radius: 24px;
+  overflow: hidden;
+  height: 400px;
+  box-shadow: var(--pc-shadow);
+}
+
+/* IMPORTANT FIX: Force Footer to be White */
+.site-footer,
+.main-footer,
+footer {
+  color: #fff !important;
+}
+
+.site-footer *,
+.main-footer *,
+footer * {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer h6,
+.main-footer h1,
+.main-footer h2,
+.main-footer h3,
+.main-footer h4,
+.main-footer h5,
+.main-footer h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+.site-footer strong,
+.main-footer strong,
+footer strong,
+.site-footer b,
+.main-footer b,
+footer b,
+.site-footer a,
+.main-footer a,
+footer a,
+.site-footer i,
+.main-footer i,
+footer i {
+  color: #fff !important;
+}
+
+.site-footer a:hover,
+.main-footer a:hover,
+footer a:hover {
+  color: var(--pc-secondary) !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .pc-hero-title {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  .pc-organic-section {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+    text-align: left;
+    /* Ensure readability */
+  }
+
+  .pc-organic-section.alt {
+    flex-direction: column;
+  }
+
+  .pc-arch-img {
+    height: 350px;
+    width: 100%;
+  }
+
+  .pc-icon-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-container {
+    padding: 0 20px;
+  }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+}

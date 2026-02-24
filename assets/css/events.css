@@ -1,0 +1,153 @@
+.shyamala-events-ui {
+  background: #faf8f4;
+  padding: 120px 0;
+}
+
+.events-intro {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.events-intro h1 {
+  font-size: 46px;
+  margin-bottom: 25px;
+}
+
+.events-intro p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.events-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  margin-bottom: 100px;
+}
+
+.events-box h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.events-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.events-list li {
+  padding-left: 30px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.events-list li::before {
+  content: "🐾";
+  position: absolute;
+  left: 0;
+}
+
+.events-note {
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.upcoming-event {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 60px;
+  border-radius: 35px;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+}
+
+.event-label {
+  background: #c1a766;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 40px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.upcoming-event h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.event-info {
+  background: #fff;
+  padding: 20px;
+  border-left: 4px solid #c1a766;
+  margin-top: 30px;
+}
+
+.how-participate {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.how-participate h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.participate-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.participate-list li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.events-footer {
+  margin: 30px 0;
+}
+
+.events-cta a {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 50px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #c1a766;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #c1a766;
+  color: #c1a766;
+}
+
+.event-date i {
+  color: #c1a766; /* orange for calendar */
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+h4 i {
+  color: #c1a766; /* brown/orange for bone icon */
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 18px;
+}

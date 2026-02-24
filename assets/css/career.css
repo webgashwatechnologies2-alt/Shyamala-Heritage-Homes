@@ -1,0 +1,377 @@
+/* 
+  Career Page Redesign - "V3 Refined Polish"
+  Theme: High-End Heritage, Professional, Editorial, "Good UI"
+*/
+
+:root {
+  --sh-primary: #1a4d2e;
+  /* Deep Forest */
+  --sh-gold: #cba135;
+  /* Antique Gold */
+  --sh-gold-light: #e6c873;
+  /* Soft Gold */
+  --sh-text-dark: #2c3e50;
+  /* Charcoal Blue */
+  --sh-text-muted: #65707e;
+  /* Slate Gray */
+  --sh-bg-soft: #fcfbf9;
+  /* Premium Paper White */
+  --sh-card-bg: #ffffff;
+  --sh-radius: 16px;
+  /* Refined, tighter radius */
+  --sh-shadow: 0 15px 40px rgba(26, 77, 46, 0.06);
+  /* Deep, soft green-tinted shadow */
+  --sh-font: "Plus Jakarta Sans", sans-serif;
+}
+
+/* --- Base & Reset --- */
+body {
+  background-color: var(--sh-bg-soft);
+  color: var(--sh-text-dark);
+  font-family: var(--sh-font);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Add a subtle grain texture to background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.career-wrapper {
+  max-width: 1400px;
+  /* Wider for 4-col grid */
+  margin: 0 auto;
+  padding: 80px 30px;
+}
+
+/* --- Hero Override (Header) --- */
+.page-header__bg .crerheader {
+  background-image: url("../Shyamalaimages/PrivateWoodenCabinPetCafe/crer.jpeg") !important;
+  background-size: cover;
+  background-position: center 40%;
+  position: relative;
+}
+
+.crerheader .page-header__bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.2) 100%);
+}
+
+.page-header__title {
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--sh-primary);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.section-title {
+  font-size: 32px;
+  /* margin-bottom: 50px; */
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: var(--sh-gold);
+}
+
+/* --- Job Cards (Refined) --- */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Force 4 columns as requested */
+  gap: 20px;
+  /* Tighter gap to fit 4 in a row */
+  margin-bottom: 80px;
+}
+
+.job-card {
+  background: var(--sh-card-bg);
+  border-radius: var(--sh-radius);
+  /* padding: 40px;  Removed padding to let image sit flush */
+  padding: 0 0 30px 0;
+  /* content padding only at bottom */
+  box-shadow: var(--sh-shadow);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image inside card */
+.job-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--sh-primary);
+  margin-bottom: 20px;
+}
+
+.job-card-content {
+  padding: 0 25px;
+  /* Inner padding for text */
+}
+
+/* Accent top border removed (using image border instead) */
+.job-card::after {
+  display: none;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(26, 77, 46, 0.12);
+}
+
+.job-card h3 {
+  font-size: 18px;
+  /* Optimized for single-row */
+  margin-bottom: 12px;
+  color: var(--sh-text-dark);
+  line-height: 1.3;
+}
+
+.job-card p {
+  color: var(--sh-text-muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.job-card ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.job-card ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--sh-text-dark);
+}
+
+.job-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid var(--sh-gold);
+  border-bottom: 2px solid var(--sh-gold);
+  transform: rotate(-45deg);
+}
+
+.job-meta {
+  margin-top: auto;
+  padding: 15px 25px 0;
+  /* Align with content padding */
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--sh-primary);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Why Join (Horizontal Tiles) --- */
+/* --- Why Join (Horizontal Tiles) --- */
+.why-section {
+  background: #fff;
+  border-radius: var(--sh-radius);
+  padding: 60px 40px;
+  box-shadow: var(--sh-shadow);
+  text-align: left;
+  /* Aligned left for side-by-side */
+  margin-bottom: 0;
+  /* Handled by row gap */
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.why-box {
+  text-align: left;
+  border-left: 3px solid rgba(0, 0, 0, 0.05);
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.why-box:hover {
+  border-left-color: var(--sh-gold);
+  transform: translateX(5px);
+}
+
+.why-box h4 {
+  color: var(--sh-text-dark);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.why-box p {
+  font-size: 14px;
+  color: var(--sh-text-muted);
+}
+
+/* --- Apply (Modern Gradient) --- */
+.apply-area {
+  background: linear-gradient(135deg, #ffd671 0%, #c1a766 100%);
+  color: #fff;
+  border-radius: var(--sh-radius);
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(26, 77, 46, 0.2);
+  margin-top: 0;
+  /* Handled by flex row */
+}
+
+/* Subtle decorative circles */
+.apply-area::before,
+.apply-area::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  z-index: 1;
+}
+
+.apply-area::before {
+  top: -50px;
+  left: -50px;
+}
+
+.apply-area::after {
+  bottom: -50px;
+  right: -50px;
+}
+
+.apply-area h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.apply-area p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.apply-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 15px 35px;
+  background: #fff;
+  color: var(--sh-primary);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apply-btn:hover {
+  background: var(--sh-gold);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive details */
+@media (max-width: 1200px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 on tablets */
+  }
+}
+
+@media (max-width: 991px) {
+  .career-wrapper {
+    padding: 60px 20px;
+  }
+
+  .job-card {
+    padding: 0 0 30px 0;
+  }
+
+  .why-section {
+    padding: 50px 30px;
+  }
+
+  .why-box {
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+    padding: 0 0 25px 0;
+  }
+
+  .why-box:hover {
+    border-bottom-color: var(--sh-gold);
+    transform: translateY(-5px);
+  }
+
+  .apply-area {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .job-grid {
+    grid-template-columns: 1fr;
+    /* Stack on mobile */
+  }
+}

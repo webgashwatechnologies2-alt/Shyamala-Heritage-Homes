@@ -1,0 +1,72 @@
+  /* Professional Gallery Card */
+  .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 260px;
+      /* Equal height for all images */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+  }
+
+  .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+  }
+
+  /* Zoom on hover */
+  .gallery-card:hover img {
+      transform: scale(1.08);
+  }
+
+  /* Hover Overlay */
+  .gallery-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transition: .3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .gallery-card:hover .gallery-hover {
+      opacity: 1;
+  }
+
+  /* Icon Style */
+  .gallery-icon {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(3px);
+      position: relative;
+  }
+
+  .gallery-icon::before {
+      content: "+";
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+
+  .galleryheader .page-header__bg {
+      background-image: url("../Shyamalaimages/Outdoor/nd.JPG") !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }

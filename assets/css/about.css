@@ -1,0 +1,91 @@
+.aboutheader .page-header__bg {
+    background-image: url("../Shyamalaimages/Villa/abtimage.jpeg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-position-y: -675px;*/
+}
+
+.page-header__title {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Owl carousel item full height */
+.testimonials-one__carousel .owl-stage {
+    display: flex;
+}
+
+.testimonials-one__carousel .owl-item {
+    display: flex;
+}
+
+/* Card full height */
+.testimonials-one__carousel .item {
+    display: flex;
+    height: 100%;
+}
+
+.testimonials-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Content auto expand */
+.testimonials-card__content {
+    flex-grow: 1;
+}
+
+/* Match Image Height to Content Height in About-three section */
+.about-three .row {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-three__thumb {
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+    /* Container for absolute thumb */
+    min-height: 400px;
+    /* Ensure visibility if content is very short */
+}
+
+.about-three__thumb__one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-three__thumb__one img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Responsiveness: Reset height on mobile */
+@media (max-width: 991px) {
+    .about-three .row {
+        display: block;
+    }
+
+    .about-three__thumb {
+        position: static;
+        height: auto;
+        min-height: 0;
+    }
+
+    .about-three__thumb__one {
+        position: static;
+        height: auto;
+    }
+
+    .about-three__thumb__one img {
+        height: auto;
+    }
+}

@@ -1,0 +1,154 @@
+.blog-card__image {
+  height: 500px;
+  /* Reduce height (change as per your design) */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Makes image fit nicely */
+  display: block;
+}
+
+/* SECTION */
+.premium-blog-section-v2 {
+  padding: 80px 0;
+  background: #f5f7f4;
+}
+
+/* GRID */
+.premium-blog-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 40px;
+}
+
+/* CARD */
+.premium-blog-card-v2 {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  border: 1px solid #e7ece9;
+}
+
+.premium-blog-card-v2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 16px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.premium-blog-img-v2 img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.premium-blog-body-v2 {
+  padding: 28px;
+}
+
+.premium-blog-body-v2 h3 a {
+  font-size: 20px;
+  color: #14322a;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.premium-blog-body-v2 h3 a:hover {
+  color: #1b563d;
+}
+
+.premium-blog-body-v2 p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #52615b;
+  line-height: 1.7;
+}
+
+/* QUOTE CARD */
+.premium-quote-card-v2 {
+  background: linear-gradient(135deg, #c1a766, #8f7f56ff);
+  padding: 40px 28px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 14px 50px rgba(0, 0, 0, 0.18);
+}
+
+.premium-quote-card-v2 i {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.premium-quote-card-v2 h3 a {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.premium-quote-card-v2 {
+  background: #f5f7f6;
+  padding: 90px 20px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8e5;
+}
+
+.premium-quote-card-v2 i.fa-paw {
+  font-size: 65px;
+  color: #c1a766;
+  margin-bottom: 15px;
+}
+
+.premium-quote-card-v2 h3 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #14422a;
+  margin-bottom: 20px;
+}
+
+.premium-quote-card-v2 h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.quote-images {
+  display: flex;
+  justify-content: center;
+  /* Centers images horizontally */
+  gap: 10px;
+  /* Space between images */
+  margin-top: 15px;
+}
+
+.quote-images img {
+  width: 60px;
+  /* Adjust size as needed */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #c1a766;
+}
+
+.hdrr {
+  background-image: url(../Shyamalaimages/PrivateWoodenCabinPetCafe/mkb.jpg);
+  background-position-y: -1290px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .premium-blog-img-v2 img {
+    height: 200px;
+  }
+}

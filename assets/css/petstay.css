@@ -1,0 +1,349 @@
+.product-details {
+  padding: 40px 0;
+  /* Reduced from 80px */
+}
+
+/* ================================
+   IMAGE SECTION
+================================ */
+.product-details__img {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.product-details__img img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .product-details__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-details__img img {
+    height: 350px;
+  }
+}
+
+/* ================================
+   CONTENT SECTION
+================================ */
+
+@media (max-width: 991px) {
+  .product-details__content {
+    padding-left: 0;
+    margin-top: 20px;
+    /* Reduced margin */
+  }
+}
+
+/* ... skipped ... */
+
+/* ================================
+   FLEX LAYOUT
+================================ */
+.product-details-flex-row {
+  display: flex;
+  gap: 35px;
+  margin-top: 30px;
+  /* Reduced from 45px */
+}
+
+.product-details-flex-row.three-cols {
+  margin-top: 35px;
+  /* Reduced from 55px */
+}
+
+.product-flex-col {
+  flex: 1;
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.product-flex-col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Breakfast Card Enhancement */
+.breakfast-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Icon strip */
+.breakfast-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed #ddd;
+  flex-wrap: wrap;
+}
+
+.breakfast-icons span {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f4f4;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.breakfast-icons i {
+  color: #2c6e49;
+  font-size: 14px;
+}
+
+.pet-experience-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.pet-experience-icons span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  background: #f8f8f8;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.pet-experience-icons i {
+  color: #6b8e23;
+  /* subtle nature green */
+  font-size: 14px;
+}
+
+.breakfast-icons-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+  /* controls top blank space */
+}
+
+.breakfast-icons-top span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  background: #f9f9f9;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.breakfast-icons-top i {
+  color: #c57a1f;
+  /* warm breakfast tone */
+  font-size: 14px;
+}
+
+.stay-icons-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  /* controls bottom blank space */
+}
+
+.stay-icons-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+  background: #f7f7f7;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.stay-icons-bottom i {
+  color: #6a8f4e;
+  /* nature + calm tone */
+  font-size: 14px;
+}
+
+.pet-meal-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.pet-meal-icons span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  background: #f7f7f7;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.pet-meal-icons i {
+  color: #6a8f4e;
+  font-size: 14px;
+}
+
+/* Remove extra space */
+.compact-card {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.breakfast-card h3 {
+  margin-bottom: 8px;
+}
+
+.breakfast-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Icon layout */
+.breakfast-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.breakfast-icons span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  background: #f7f7f7;
+  padding: 6px 12px;
+  border-radius: 18px;
+  color: #444;
+}
+
+.breakfast-icons i {
+  color: #6a8f4e;
+  font-size: 14px;
+}
+
+.product-details__img.overlay-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-details__img.overlay-hover img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.product-details__img.overlay-hover:hover img {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  border-radius: 6px;
+}
+
+.product-details__img.overlay-hover:hover .overlay-text {
+  opacity: 1;
+}
+
+.product-details__description__title i {
+  color: #c1a766;
+  /* icon color */
+  margin-right: 8px;
+  /* emoji ke jagah thoda space */
+  font-size: 22px;
+  /* heading ke size ke hisaab se */
+  vertical-align: middle;
+}
+
+.product-details__excerpt-text1 i {
+  color: #c1a766;
+  /* leaf icon color */
+  margin-left: 4px;
+  /* spacing between text and icon */
+  font-size: 16px;
+  /* adjust size to match text */
+}
+
+.product-details__description__title i,
+.product-details__description__lists i {
+  color: #c1a766;
+  /* green theme */
+  margin-right: 8px;
+  font-size: 16px;
+  /* heading 22px, list 16px */
+  vertical-align: middle;
+}
+
+.product-details__description__title i,
+.product-details__description__lists i {
+  color: #c1a766;
+  /* green theme for consistency */
+  margin-right: 8px;
+  font-size: 16px;
+  /* heading 22px, list 16px */
+  vertical-align: middle;
+}
+
+/* Hide icons in list items to remove checkmarks */
+.product-details__description__lists li i {
+  display: none !important;
+}
+
+/* Remove left padding since we're hiding the icons */
+.product-details__description__lists li {
+  padding-left: 0 !important;
+}
+
+
+@media (max-width: 991px) {
+  .product-details-flex-row {
+    flex-direction: column;
+  }
+}
+
+/* Hero Banner Fix */
+.headerrr {
+  background-image: url('../Shyamalaimages/PrivateWoodenCabinPetCafe/slider3.jpeg') !important;
+  background-position: center;
+  background-size: cover;
+}
